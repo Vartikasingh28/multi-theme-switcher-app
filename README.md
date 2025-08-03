@@ -7,7 +7,7 @@ This is a React + TypeScript application that allows users to switch between **t
 - **Theme 3**: Playful colorful layout with a card-based grid using Google Fonts  
 
 The theme switcher persists across reloads and is globally managed using React Context API.
-Deployment Link-https://dynamic-dango-f6b24d.netlify.app/
+Deployment Link- https://theme-switcher-f6b24d.netlify.app/
 ---
 
 ## 🚀 Features
