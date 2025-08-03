@@ -1,69 +1,90 @@
-# React + TypeScript + Vite
+# 🎨 Multi-Theme Switcher React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React + TypeScript application that allows users to switch between **three distinct themes**:
 
-Currently, two official plugins are available:
+- **Theme 1**: Minimalist light layout with sans-serif fonts  
+- **Theme 2**: Dark mode with a sidebar layout and serif fonts  
+- **Theme 3**: Playful colorful layout with a card-based grid using Google Fonts  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The theme switcher persists across reloads and is globally managed using React Context API.
+Deployment Link-https://dynamic-dango-f6b24d.netlify.app/
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🔁 Switch between 3 fully different themes
+- 🌐 Theme persists using `localStorage`
+- 📦 Product cards loaded via [FakeStoreAPI](https://fakestoreapi.com/)
+- 📱 Fully responsive layout (CSS)
+- 🛠 Built using:
+  - React + TypeScript
+  - React Router
+  - CSS for styling
+  - Vite for fast dev/build
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
+multi-theme-switcher-app/
+├── public/
+│ └── index.html
+├── src/
+│ ├── components/
+│ │ └── Header.tsx
+│ ├── context/
+│ │ └── ThemeContext.tsx
+│ ├── pages/
+│ │ ├── Home.tsx
+│ │ ├── About.tsx
+│ │ └── Contact.tsx
+│ ├── styles/
+│ │ └── theme.css
+│ ├── App.tsx
+│ ├── main.tsx
+│ └── vite-env.d.ts
+├── index.html
+├── tsconfig.json
+├── vite.config.ts
+├── package.json
+└── README.md
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ⚙️ Setup Instructions
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 1. Clone the repository
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+git clone https://github.com/your-username/multi-theme-switcher-app.git
+cd multi-theme-switcher-app
+2. Install dependencies
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+npm install
+3. Start the development server
+
+npm run dev
+App will be available at http://localhost:5173/
+
+4. Build for production
+
+npm run build
+5. Preview production build
+
+npm run preview
+🌍 Deployment (Netlify)
+Push your code to GitHub
+
+Go to Netlify
+
+Connect your GitHub repo
+
+Set build command to:
+
+🔧 Scripts
+Command	Description
+npm run dev	Start development server
+npm run build	Build production version
+npm run preview	Preview production build
+tsc -b	Type-check the codebase
+
+
+
+## 📁
